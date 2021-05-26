@@ -10,6 +10,10 @@
     "bin": {
         "unfuck": "lib/bin/compile.js"
     },
+    "files": [
+        "./lib/**/*",
+        "./brainunfuck.js"
+    ],
     "author": "",
     "license": "ISC",
     "dependencies": {

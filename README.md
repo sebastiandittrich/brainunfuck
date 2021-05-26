@@ -2,6 +2,12 @@
 
 This is a compiler for a custom programming language called "brainunfuck". "brainunfuck" compiles to brainfuck. It also contains an own interpreter for brainfuck, to immedeately run compiled brainfuck code.
 
+```
+npm i -g brainunfuck
+```
+
+Node Version 14 is recommended. Untested with versions lower than that.
+
 ## Example
 
 Our example file:
