@@ -1,0 +1,25 @@
+{
+    "name": "brainunfuck",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc && npm run build:grammar",
+        "build:grammar": "nearleyc brainunfuck.ne -o brainunfuck.js"
+    },
+    "bin": {
+        "unfuck": "lib/bin/compile.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@tsconfig/node14": "^1.0.0",
+        "commander": "^2.20.3",
+        "nearley": "^2.20.1",
+        "typescript": "^4.3.2"
+    },
+    "devDependencies": {
+        "@types/nearley": "^2.11.1",
+        "@types/node": "^15.6.1"
+    }
+}
