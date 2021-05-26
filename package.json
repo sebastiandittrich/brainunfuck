@@ -11,8 +11,8 @@
         "unfuck": "lib/bin/compile.js"
     },
     "files": [
-        "./lib/**/*",
-        "./brainunfuck.js"
+        "/lib/",
+        "/brainunfuck.js"
     ],
     "author": "",
     "license": "ISC",
