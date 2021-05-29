@@ -87,7 +87,7 @@ while $i {
 The command line utility contains an option to compile and translate brainfuck code to valid c++ code. Just run
 
 ```
-unfuck translate -l c++ ./path/to/file.unfuck
+unfuck translate --language c++ ./path/to/file.unfuck
 ```
 
 If you wanted to compile raw brainfuck code, without compilation, run
