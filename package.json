@@ -15,8 +15,12 @@
         "/brainunfuck.js",
         "/brainfuck.js"
     ],
-    "author": "",
-    "license": "ISC",
+    "author": "Sebastian Dittrich",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/sebastiandittrich/brainunfuck/issues"
+    },
+    "homepage": "https://github.com/sebastiandittrich/brainunfuck",
     "dependencies": {
         "@tsconfig/node14": "^1.0.0",
         "commander": "^2.20.3",
