@@ -22,7 +22,7 @@ Compiled brainfuck code using `unfuck compile ./path/to/file.unfuck`:
 [-]+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.
 ```
 
-Output using `unfuck run ./path/to/file.unfuck` or `unfuck run --no-compiler ./path/to/compiled/file.bf`:
+Output using `unfuck run ./path/to/file.unfuck` or `unfuck run --no-compiler ./path/to/compiled/file.b`:
 
 ```
 A
@@ -80,4 +80,18 @@ while $i {
     print "I will be printed 10 times!!!";
     $i = $i - 1;
 }; <- also here, semicolon at the end
+```
+
+## Translate brainfuck to c++
+
+The command line utility contains an option to compile and translate brainfuck code to valid c++ code. Just run
+
+```
+unfuck translate -l c++ ./path/to/file.unfuck
+```
+
+If you wanted to compile raw brainfuck code, without compilation, run
+
+```
+unfuck translate --language c++ --no-compiler ./path/to/file.b
 ```
