@@ -12,7 +12,8 @@
     },
     "files": [
         "/lib/",
-        "/brainunfuck.js"
+        "/brainunfuck.js",
+        "/brainfuck.js"
     ],
     "author": "",
     "license": "ISC",
