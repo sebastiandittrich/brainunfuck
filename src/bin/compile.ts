@@ -9,6 +9,7 @@ import { optimize as optimizeBrainfuck } from "../interpreter/optimize";
 import inquirer, { Question } from "inquirer";
 import Base from "inquirer/lib/prompts/base";
 import { Interface } from "readline";
+import { CTranslator } from "../interpreter/CTranslator";
 
 const program = new Command();
 
@@ -125,23 +126,22 @@ program
 //   }
 // });
 
-// program
-//   .command("translate <path>")
-//   .option("-o, --out <file>", "output file")
-//   .option("-r, --no-compiler", "run raw brainfuck code")
-//   .option("-s, --no-optimizer", "run raw brainfuck code")
-//   .option(
-//     "-l, --language <language>",
-//     "the language to that the code should be translated"
-//   )
-//   .option("--benchmark", "show how long this action took")
-//   .action(
-//     handle((statements, options) => {
-//       if (options.language == "c++") {
-//         return new CTranslator().translate(statements);
-//       }
-//       throw new Error("Language not supported!");
-//     })
-//   );
+program
+  .command("translate <path>")
+  .option("-o, --out <file>", "output file")
+  .option("-r, --no-compiler", "run raw brainfuck code")
+  .option("-s, --no-optimizer", "run raw brainfuck code")
+  .option(
+    "-l, --language <language>",
+    "the language to that the code should be translated"
+  )
+  .option("--benchmark", "show how long this action took")
+  .action(async (path, options) => {
+    const { parsed, output } = await prepare(path, options);
+    if (options.language == "c++") {
+      return output(new CTranslator().translate(parsed));
+    }
+    throw new Error("Language not supported!");
+  });
 
 program.parse(process.argv);
