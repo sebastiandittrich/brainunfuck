@@ -1,3 +1,4 @@
+import { isFunctionDeclaration } from "typescript";
 import { ChangePointer, ChangeValue, Loop } from "./ast";
 import { Interpreter } from "./Interpreter";
 

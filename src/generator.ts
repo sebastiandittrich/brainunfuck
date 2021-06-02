@@ -58,7 +58,7 @@ export class Field {
     return this.execute(".");
   }
   clone(): this {
-    const n = new (this.constructor as any)();
+    const n = new (this.constructor as any)(this.environment);
     this.copy(n);
     return n;
   }
